@@ -1,0 +1,1103 @@
+MC1:
+  PT1: GND
+  PT2: GND
+  PT3: GND
+  PT4: GND
+  PT5: GND
+  CFG:
+    pt_power       = off
+    pt1_mux        = sum
+    pt2_mux        = sum
+    pt3_mux        = ar
+    gclr_mux       = GND
+    pt4_mux        = clk_ce
+    pt4_func       = clk
+    gclk_mux       = GCLK2
+    pt5_mux        = as_oe
+    pt5_func       = oe
+    xor_a_mux      = VCC_pt2
+    xor_b_mux      = VCC_pt12
+    cas_mux        = sum
+    xor_invert     = on
+    d_mux          = comb
+    dfast_mux      = pt2
+    reset          = GND
+    storage        = dff
+    fb_mux         = comb
+    o_mux          = comb
+    oe_mux         = GND
+    slew_rate      = slow
+    output_driver  = push_pull
+    low_power      = off
+MC2:
+  PT1: GND
+  PT2: GND
+  PT3: GND
+  PT4: GND
+  PT5: GND
+  CFG:
+    pt_power       = off
+    pt1_mux        = sum
+    pt2_mux        = sum
+    pt3_mux        = ar
+    gclr_mux       = GND
+    pt4_mux        = clk_ce
+    pt4_func       = clk
+    gclk_mux       = GCLK2
+    pt5_mux        = as_oe
+    pt5_func       = oe
+    xor_a_mux      = VCC_pt2
+    xor_b_mux      = VCC_pt12
+    cas_mux        = sum
+    xor_invert     = on
+    d_mux          = comb
+    dfast_mux      = pt2
+    reset          = GND
+    storage        = dff
+    fb_mux         = comb
+    o_mux          = comb
+    oe_mux         = GND
+    slew_rate      = slow
+    output_driver  = push_pull
+    low_power      = off
+MC3:
+  PT1: GND
+  PT2: GND
+  PT3: GND
+  PT4: GND
+  PT5: GND
+  CFG:
+    pt_power       = off
+    pt1_mux        = sum
+    pt2_mux        = sum
+    pt3_mux        = sum
+    gclr_mux       = GND
+    pt4_mux        = sum
+    pt4_func       = clk
+    gclk_mux       = GCLK2
+    pt5_mux        = sum
+    pt5_func       = as
+    xor_a_mux      = sum
+    xor_b_mux      = VCC_pt12
+    cas_mux        = GND
+    xor_invert     = on
+    d_mux          = comb
+    dfast_mux      = pt2
+    reset          = GND
+    storage        = latch
+    fb_mux         = comb
+    o_mux          = comb
+    oe_mux         = GND
+    slew_rate      = slow
+    output_driver  = push_pull
+    low_power      = off
+MC4:
+  PT1: GND
+  PT2: GND
+  PT3: GND
+  PT4: GND
+  PT5: GND
+  CFG:
+    pt_power       = off
+    pt1_mux        = sum
+    pt2_mux        = sum
+    pt3_mux        = ar
+    gclr_mux       = GND
+    pt4_mux        = clk_ce
+    pt4_func       = clk
+    gclk_mux       = GCLK2
+    pt5_mux        = as_oe
+    pt5_func       = oe
+    xor_a_mux      = VCC_pt2
+    xor_b_mux      = VCC_pt12
+    cas_mux        = sum
+    xor_invert     = on
+    d_mux          = comb
+    dfast_mux      = pt2
+    reset          = GND
+    storage        = dff
+    fb_mux         = comb
+    o_mux          = comb
+    oe_mux         = GND
+    slew_rate      = slow
+    output_driver  = push_pull
+    low_power      = off
+MC5:
+  PT1: GND
+  PT2: GND
+  PT3: GND
+  PT4: GND
+  PT5: GND
+  CFG:
+    pt_power       = off
+    pt1_mux        = sum
+    pt2_mux        = sum
+    pt3_mux        = sum
+    gclr_mux       = GND
+    pt4_mux        = sum
+    pt4_func       = clk
+    gclk_mux       = GCLK2
+    pt5_mux        = sum
+    pt5_func       = as
+    xor_a_mux      = sum
+    xor_b_mux      = VCC_pt12
+    cas_mux        = GND
+    xor_invert     = on
+    d_mux          = comb
+    dfast_mux      = pt2
+    reset          = GND
+    storage        = latch
+    fb_mux         = comb
+    o_mux          = comb
+    oe_mux         = GND
+    slew_rate      = slow
+    output_driver  = push_pull
+    low_power      = off
+MC6:
+  PT1: GND
+  PT2: GND
+  PT3: GND
+  PT4: GND
+  PT5: GND
+  CFG:
+    pt_power       = off
+    pt1_mux        = sum
+    pt2_mux        = sum
+    pt3_mux        = sum
+    gclr_mux       = GND
+    pt4_mux        = sum
+    pt4_func       = clk
+    gclk_mux       = GCLK2
+    pt5_mux        = sum
+    pt5_func       = as
+    xor_a_mux      = sum
+    xor_b_mux      = VCC_pt12
+    cas_mux        = GND
+    xor_invert     = on
+    d_mux          = comb
+    dfast_mux      = pt2
+    reset          = GND
+    storage        = latch
+    fb_mux         = comb
+    o_mux          = comb
+    oe_mux         = GND
+    slew_rate      = slow
+    output_driver  = push_pull
+    low_power      = off
+MC7:
+  PT1: GND
+  PT2: GND
+  PT3: GND
+  PT4: GND
+  PT5: GND
+  CFG:
+    pt_power       = off
+    pt1_mux        = sum
+    pt2_mux        = sum
+    pt3_mux        = sum
+    gclr_mux       = GND
+    pt4_mux        = sum
+    pt4_func       = clk
+    gclk_mux       = GCLK2
+    pt5_mux        = sum
+    pt5_func       = as
+    xor_a_mux      = sum
+    xor_b_mux      = VCC_pt12
+    cas_mux        = GND
+    xor_invert     = on
+    d_mux          = comb
+    dfast_mux      = pt2
+    reset          = GND
+    storage        = latch
+    fb_mux         = comb
+    o_mux          = comb
+    oe_mux         = GND
+    slew_rate      = slow
+    output_driver  = push_pull
+    low_power      = off
+MC8:
+  PT1: GND
+  PT2: GND
+  PT3: GND
+  PT4: GND
+  PT5: GND
+  CFG:
+    pt_power       = off
+    pt1_mux        = sum
+    pt2_mux        = sum
+    pt3_mux        = sum
+    gclr_mux       = GND
+    pt4_mux        = sum
+    pt4_func       = clk
+    gclk_mux       = GCLK2
+    pt5_mux        = sum
+    pt5_func       = as
+    xor_a_mux      = sum
+    xor_b_mux      = VCC_pt12
+    cas_mux        = GND
+    xor_invert     = on
+    d_mux          = comb
+    dfast_mux      = pt2
+    reset          = GND
+    storage        = latch
+    fb_mux         = comb
+    o_mux          = comb
+    oe_mux         = GND
+    slew_rate      = slow
+    output_driver  = push_pull
+    low_power      = off
+MC9:
+  PT1: GND
+  PT2: GND
+  PT3: GND
+  PT4: GND
+  PT5: GND
+  CFG:
+    pt_power       = off
+    pt1_mux        = sum
+    pt2_mux        = sum
+    pt3_mux        = ar
+    gclr_mux       = GND
+    pt4_mux        = clk_ce
+    pt4_func       = clk
+    gclk_mux       = GCLK2
+    pt5_mux        = as_oe
+    pt5_func       = oe
+    xor_a_mux      = VCC_pt2
+    xor_b_mux      = VCC_pt12
+    cas_mux        = sum
+    xor_invert     = on
+    d_mux          = comb
+    dfast_mux      = pt2
+    reset          = GND
+    storage        = dff
+    fb_mux         = comb
+    o_mux          = comb
+    oe_mux         = GND
+    slew_rate      = slow
+    output_driver  = push_pull
+    low_power      = off
+MC10:
+  PT1: GND
+  PT2: GND
+  PT3: GND
+  PT4: GND
+  PT5: GND
+  CFG:
+    pt_power       = off
+    pt1_mux        = sum
+    pt2_mux        = sum
+    pt3_mux        = sum
+    gclr_mux       = GND
+    pt4_mux        = sum
+    pt4_func       = clk
+    gclk_mux       = GCLK2
+    pt5_mux        = sum
+    pt5_func       = as
+    xor_a_mux      = sum
+    xor_b_mux      = VCC_pt12
+    cas_mux        = GND
+    xor_invert     = on
+    d_mux          = comb
+    dfast_mux      = pt2
+    reset          = GND
+    storage        = latch
+    fb_mux         = comb
+    o_mux          = comb
+    oe_mux         = GND
+    slew_rate      = slow
+    output_driver  = push_pull
+    low_power      = off
+MC11:
+  PT1: GND
+  PT2: GND
+  PT3: GND
+  PT4: GND
+  PT5: GND
+  CFG:
+    pt_power       = off
+    pt1_mux        = sum
+    pt2_mux        = sum
+    pt3_mux        = sum
+    gclr_mux       = GND
+    pt4_mux        = sum
+    pt4_func       = clk
+    gclk_mux       = GCLK2
+    pt5_mux        = sum
+    pt5_func       = as
+    xor_a_mux      = sum
+    xor_b_mux      = VCC_pt12
+    cas_mux        = GND
+    xor_invert     = on
+    d_mux          = comb
+    dfast_mux      = pt2
+    reset          = GND
+    storage        = latch
+    fb_mux         = comb
+    o_mux          = comb
+    oe_mux         = GND
+    slew_rate      = slow
+    output_driver  = push_pull
+    low_power      = off
+MC12:
+  PT1: GND
+  PT2: GND
+  PT3: GND
+  PT4: GND
+  PT5: GND
+  CFG:
+    pt_power       = off
+    pt1_mux        = sum
+    pt2_mux        = sum
+    pt3_mux        = sum
+    gclr_mux       = GND
+    pt4_mux        = sum
+    pt4_func       = clk
+    gclk_mux       = GCLK2
+    pt5_mux        = sum
+    pt5_func       = as
+    xor_a_mux      = sum
+    xor_b_mux      = VCC_pt12
+    cas_mux        = GND
+    xor_invert     = on
+    d_mux          = comb
+    dfast_mux      = pt2
+    reset          = GND
+    storage        = latch
+    fb_mux         = comb
+    o_mux          = comb
+    oe_mux         = GND
+    slew_rate      = slow
+    output_driver  = push_pull
+    low_power      = off
+MC13:
+  PT1: GND
+  PT2: GND
+  PT3: GND
+  PT4: GND
+  PT5: GND
+  CFG:
+    pt_power       = off
+    pt1_mux        = sum
+    pt2_mux        = sum
+    pt3_mux        = sum
+    gclr_mux       = GND
+    pt4_mux        = sum
+    pt4_func       = clk
+    gclk_mux       = GCLK2
+    pt5_mux        = sum
+    pt5_func       = as
+    xor_a_mux      = sum
+    xor_b_mux      = VCC_pt12
+    cas_mux        = GND
+    xor_invert     = on
+    d_mux          = comb
+    dfast_mux      = pt2
+    reset          = GND
+    storage        = latch
+    fb_mux         = comb
+    o_mux          = comb
+    oe_mux         = GND
+    slew_rate      = slow
+    output_driver  = push_pull
+    low_power      = off
+MC14:
+  PT1: GND
+  PT2: GND
+  PT3: GND
+  PT4: GND
+  PT5: GND
+  CFG:
+    pt_power       = off
+    pt1_mux        = sum
+    pt2_mux        = sum
+    pt3_mux        = sum
+    gclr_mux       = GND
+    pt4_mux        = sum
+    pt4_func       = clk
+    gclk_mux       = GCLK2
+    pt5_mux        = sum
+    pt5_func       = as
+    xor_a_mux      = sum
+    xor_b_mux      = VCC_pt12
+    cas_mux        = GND
+    xor_invert     = on
+    d_mux          = comb
+    dfast_mux      = pt2
+    reset          = GND
+    storage        = latch
+    fb_mux         = comb
+    o_mux          = comb
+    oe_mux         = GND
+    slew_rate      = slow
+    output_driver  = push_pull
+    low_power      = off
+MC15:
+  PT1: UIM24_P
+  PT2: GND
+  PT3: GND
+  PT4: GND
+  PT5: GND
+  CFG:
+    pt_power       = on
+    pt1_mux        = sum
+    pt2_mux        = sum
+    pt3_mux        = ar
+    gclr_mux       = GND
+    pt4_mux        = clk_ce
+    pt4_func       = clk
+    gclk_mux       = GCLK2
+    pt5_mux        = as_oe
+    pt5_func       = as
+    xor_a_mux      = sum
+    xor_b_mux      = VCC_pt12
+    cas_mux        = GND
+    xor_invert     = on
+    d_mux          = comb
+    dfast_mux      = pt2
+    reset          = GND
+    storage        = dff
+    fb_mux         = comb
+    o_mux          = comb
+    oe_mux         = VCC_pt5
+    slew_rate      = slow
+    output_driver  = push_pull
+    low_power      = off
+MC16:
+  PT1: UIM26_P
+  PT2: GND
+  PT3: GND
+  PT4: GND
+  PT5: GND
+  CFG:
+    pt_power       = on
+    pt1_mux        = sum
+    pt2_mux        = sum
+    pt3_mux        = ar
+    gclr_mux       = GND
+    pt4_mux        = clk_ce
+    pt4_func       = clk
+    gclk_mux       = GCLK2
+    pt5_mux        = as_oe
+    pt5_func       = as
+    xor_a_mux      = sum
+    xor_b_mux      = VCC_pt12
+    cas_mux        = GND
+    xor_invert     = on
+    d_mux          = comb
+    dfast_mux      = pt2
+    reset          = GND
+    storage        = dff
+    fb_mux         = comb
+    o_mux          = comb
+    oe_mux         = VCC_pt5
+    slew_rate      = slow
+    output_driver  = push_pull
+    low_power      = off
+MC17:
+  PT1: GND
+  PT2: GND
+  PT3: GND
+  PT4: GND
+  PT5: GND
+  CFG:
+    pt_power       = off
+    pt1_mux        = sum
+    pt2_mux        = sum
+    pt3_mux        = sum
+    gclr_mux       = GND
+    pt4_mux        = sum
+    pt4_func       = clk
+    gclk_mux       = GCLK2
+    pt5_mux        = sum
+    pt5_func       = as
+    xor_a_mux      = sum
+    xor_b_mux      = VCC_pt12
+    cas_mux        = GND
+    xor_invert     = on
+    d_mux          = comb
+    dfast_mux      = pt2
+    reset          = GND
+    storage        = latch
+    fb_mux         = comb
+    o_mux          = comb
+    oe_mux         = GND
+    slew_rate      = slow
+    output_driver  = push_pull
+    low_power      = off
+MC18:
+  PT1: GND
+  PT2: GND
+  PT3: GND
+  PT4: GND
+  PT5: GND
+  CFG:
+    pt_power       = off
+    pt1_mux        = sum
+    pt2_mux        = sum
+    pt3_mux        = sum
+    gclr_mux       = GND
+    pt4_mux        = sum
+    pt4_func       = clk
+    gclk_mux       = GCLK2
+    pt5_mux        = sum
+    pt5_func       = as
+    xor_a_mux      = sum
+    xor_b_mux      = VCC_pt12
+    cas_mux        = GND
+    xor_invert     = on
+    d_mux          = comb
+    dfast_mux      = pt2
+    reset          = GND
+    storage        = latch
+    fb_mux         = comb
+    o_mux          = comb
+    oe_mux         = GND
+    slew_rate      = slow
+    output_driver  = push_pull
+    low_power      = off
+MC19:
+  PT1: GND
+  PT2: GND
+  PT3: GND
+  PT4: GND
+  PT5: GND
+  CFG:
+    pt_power       = off
+    pt1_mux        = sum
+    pt2_mux        = sum
+    pt3_mux        = sum
+    gclr_mux       = GND
+    pt4_mux        = sum
+    pt4_func       = clk
+    gclk_mux       = GCLK2
+    pt5_mux        = sum
+    pt5_func       = as
+    xor_a_mux      = sum
+    xor_b_mux      = VCC_pt12
+    cas_mux        = GND
+    xor_invert     = on
+    d_mux          = comb
+    dfast_mux      = pt2
+    reset          = GND
+    storage        = latch
+    fb_mux         = comb
+    o_mux          = comb
+    oe_mux         = GND
+    slew_rate      = slow
+    output_driver  = push_pull
+    low_power      = off
+MC20:
+  PT1: GND
+  PT2: GND
+  PT3: GND
+  PT4: GND
+  PT5: GND
+  CFG:
+    pt_power       = off
+    pt1_mux        = sum
+    pt2_mux        = sum
+    pt3_mux        = ar
+    gclr_mux       = GND
+    pt4_mux        = clk_ce
+    pt4_func       = clk
+    gclk_mux       = GCLK2
+    pt5_mux        = as_oe
+    pt5_func       = oe
+    xor_a_mux      = VCC_pt2
+    xor_b_mux      = VCC_pt12
+    cas_mux        = sum
+    xor_invert     = on
+    d_mux          = comb
+    dfast_mux      = pt2
+    reset          = GND
+    storage        = dff
+    fb_mux         = comb
+    o_mux          = comb
+    oe_mux         = GND
+    slew_rate      = slow
+    output_driver  = push_pull
+    low_power      = off
+MC21:
+  PT1: GND
+  PT2: GND
+  PT3: GND
+  PT4: GND
+  PT5: GND
+  CFG:
+    pt_power       = off
+    pt1_mux        = sum
+    pt2_mux        = sum
+    pt3_mux        = sum
+    gclr_mux       = GND
+    pt4_mux        = sum
+    pt4_func       = clk
+    gclk_mux       = GCLK2
+    pt5_mux        = sum
+    pt5_func       = as
+    xor_a_mux      = sum
+    xor_b_mux      = VCC_pt12
+    cas_mux        = GND
+    xor_invert     = on
+    d_mux          = comb
+    dfast_mux      = pt2
+    reset          = GND
+    storage        = latch
+    fb_mux         = comb
+    o_mux          = comb
+    oe_mux         = GND
+    slew_rate      = slow
+    output_driver  = push_pull
+    low_power      = off
+MC22:
+  PT1: GND
+  PT2: GND
+  PT3: GND
+  PT4: GND
+  PT5: GND
+  CFG:
+    pt_power       = off
+    pt1_mux        = sum
+    pt2_mux        = sum
+    pt3_mux        = sum
+    gclr_mux       = GND
+    pt4_mux        = sum
+    pt4_func       = clk
+    gclk_mux       = GCLK2
+    pt5_mux        = sum
+    pt5_func       = as
+    xor_a_mux      = sum
+    xor_b_mux      = VCC_pt12
+    cas_mux        = GND
+    xor_invert     = on
+    d_mux          = comb
+    dfast_mux      = pt2
+    reset          = GND
+    storage        = latch
+    fb_mux         = comb
+    o_mux          = comb
+    oe_mux         = GND
+    slew_rate      = slow
+    output_driver  = push_pull
+    low_power      = off
+MC23:
+  PT1: GND
+  PT2: GND
+  PT3: GND
+  PT4: GND
+  PT5: GND
+  CFG:
+    pt_power       = off
+    pt1_mux        = sum
+    pt2_mux        = sum
+    pt3_mux        = sum
+    gclr_mux       = GND
+    pt4_mux        = sum
+    pt4_func       = clk
+    gclk_mux       = GCLK2
+    pt5_mux        = sum
+    pt5_func       = as
+    xor_a_mux      = sum
+    xor_b_mux      = VCC_pt12
+    cas_mux        = GND
+    xor_invert     = on
+    d_mux          = comb
+    dfast_mux      = pt2
+    reset          = GND
+    storage        = latch
+    fb_mux         = comb
+    o_mux          = comb
+    oe_mux         = GND
+    slew_rate      = slow
+    output_driver  = push_pull
+    low_power      = off
+MC24:
+  PT1: GND
+  PT2: GND
+  PT3: GND
+  PT4: GND
+  PT5: GND
+  CFG:
+    pt_power       = off
+    pt1_mux        = sum
+    pt2_mux        = sum
+    pt3_mux        = sum
+    gclr_mux       = GND
+    pt4_mux        = sum
+    pt4_func       = clk
+    gclk_mux       = GCLK2
+    pt5_mux        = sum
+    pt5_func       = as
+    xor_a_mux      = sum
+    xor_b_mux      = VCC_pt12
+    cas_mux        = GND
+    xor_invert     = on
+    d_mux          = comb
+    dfast_mux      = pt2
+    reset          = GND
+    storage        = latch
+    fb_mux         = comb
+    o_mux          = comb
+    oe_mux         = GND
+    slew_rate      = slow
+    output_driver  = push_pull
+    low_power      = off
+MC25:
+  PT1: GND
+  PT2: GND
+  PT3: GND
+  PT4: GND
+  PT5: GND
+  CFG:
+    pt_power       = off
+    pt1_mux        = sum
+    pt2_mux        = sum
+    pt3_mux        = ar
+    gclr_mux       = GND
+    pt4_mux        = clk_ce
+    pt4_func       = clk
+    gclk_mux       = GCLK2
+    pt5_mux        = as_oe
+    pt5_func       = oe
+    xor_a_mux      = VCC_pt2
+    xor_b_mux      = VCC_pt12
+    cas_mux        = sum
+    xor_invert     = on
+    d_mux          = comb
+    dfast_mux      = pt2
+    reset          = GND
+    storage        = dff
+    fb_mux         = comb
+    o_mux          = comb
+    oe_mux         = GND
+    slew_rate      = slow
+    output_driver  = push_pull
+    low_power      = off
+MC26:
+  PT1: GND
+  PT2: GND
+  PT3: GND
+  PT4: GND
+  PT5: GND
+  CFG:
+    pt_power       = off
+    pt1_mux        = sum
+    pt2_mux        = sum
+    pt3_mux        = sum
+    gclr_mux       = GND
+    pt4_mux        = sum
+    pt4_func       = clk
+    gclk_mux       = GCLK2
+    pt5_mux        = sum
+    pt5_func       = as
+    xor_a_mux      = sum
+    xor_b_mux      = VCC_pt12
+    cas_mux        = GND
+    xor_invert     = on
+    d_mux          = comb
+    dfast_mux      = pt2
+    reset          = GND
+    storage        = latch
+    fb_mux         = comb
+    o_mux          = comb
+    oe_mux         = GND
+    slew_rate      = slow
+    output_driver  = push_pull
+    low_power      = off
+MC27:
+  PT1: GND
+  PT2: GND
+  PT3: GND
+  PT4: GND
+  PT5: GND
+  CFG:
+    pt_power       = off
+    pt1_mux        = sum
+    pt2_mux        = sum
+    pt3_mux        = sum
+    gclr_mux       = GND
+    pt4_mux        = sum
+    pt4_func       = clk
+    gclk_mux       = GCLK2
+    pt5_mux        = sum
+    pt5_func       = as
+    xor_a_mux      = sum
+    xor_b_mux      = VCC_pt12
+    cas_mux        = GND
+    xor_invert     = on
+    d_mux          = comb
+    dfast_mux      = pt2
+    reset          = GND
+    storage        = latch
+    fb_mux         = comb
+    o_mux          = comb
+    oe_mux         = GND
+    slew_rate      = slow
+    output_driver  = push_pull
+    low_power      = off
+MC28:
+  PT1: GND
+  PT2: GND
+  PT3: GND
+  PT4: GND
+  PT5: GND
+  CFG:
+    pt_power       = off
+    pt1_mux        = sum
+    pt2_mux        = sum
+    pt3_mux        = sum
+    gclr_mux       = GND
+    pt4_mux        = sum
+    pt4_func       = clk
+    gclk_mux       = GCLK2
+    pt5_mux        = sum
+    pt5_func       = as
+    xor_a_mux      = sum
+    xor_b_mux      = VCC_pt12
+    cas_mux        = GND
+    xor_invert     = on
+    d_mux          = comb
+    dfast_mux      = pt2
+    reset          = GND
+    storage        = latch
+    fb_mux         = comb
+    o_mux          = comb
+    oe_mux         = GND
+    slew_rate      = slow
+    output_driver  = push_pull
+    low_power      = off
+MC29:
+  PT1: GND
+  PT2: GND
+  PT3: GND
+  PT4: GND
+  PT5: GND
+  CFG:
+    pt_power       = off
+    pt1_mux        = sum
+    pt2_mux        = sum
+    pt3_mux        = sum
+    gclr_mux       = GND
+    pt4_mux        = sum
+    pt4_func       = clk
+    gclk_mux       = GCLK2
+    pt5_mux        = sum
+    pt5_func       = as
+    xor_a_mux      = sum
+    xor_b_mux      = VCC_pt12
+    cas_mux        = GND
+    xor_invert     = on
+    d_mux          = comb
+    dfast_mux      = pt2
+    reset          = GND
+    storage        = latch
+    fb_mux         = comb
+    o_mux          = comb
+    oe_mux         = GND
+    slew_rate      = slow
+    output_driver  = push_pull
+    low_power      = off
+MC30:
+  PT1: GND
+  PT2: GND
+  PT3: GND
+  PT4: GND
+  PT5: GND
+  CFG:
+    pt_power       = off
+    pt1_mux        = sum
+    pt2_mux        = sum
+    pt3_mux        = sum
+    gclr_mux       = GND
+    pt4_mux        = sum
+    pt4_func       = clk
+    gclk_mux       = GCLK2
+    pt5_mux        = sum
+    pt5_func       = as
+    xor_a_mux      = sum
+    xor_b_mux      = VCC_pt12
+    cas_mux        = GND
+    xor_invert     = on
+    d_mux          = comb
+    dfast_mux      = pt2
+    reset          = GND
+    storage        = latch
+    fb_mux         = comb
+    o_mux          = comb
+    oe_mux         = GND
+    slew_rate      = slow
+    output_driver  = push_pull
+    low_power      = off
+MC31:
+  PT1: GND
+  PT2: GND
+  PT3: GND
+  PT4: GND
+  PT5: GND
+  CFG:
+    pt_power       = off
+    pt1_mux        = sum
+    pt2_mux        = sum
+    pt3_mux        = sum
+    gclr_mux       = GND
+    pt4_mux        = sum
+    pt4_func       = clk
+    gclk_mux       = GCLK2
+    pt5_mux        = sum
+    pt5_func       = as
+    xor_a_mux      = sum
+    xor_b_mux      = VCC_pt12
+    cas_mux        = GND
+    xor_invert     = on
+    d_mux          = comb
+    dfast_mux      = pt2
+    reset          = GND
+    storage        = latch
+    fb_mux         = comb
+    o_mux          = comb
+    oe_mux         = GND
+    slew_rate      = slow
+    output_driver  = push_pull
+    low_power      = off
+MC32:
+  PT1: GND
+  PT2: GND
+  PT3: GND
+  PT4: GND
+  PT5: GND
+  CFG:
+    pt_power       = off
+    pt1_mux        = sum
+    pt2_mux        = sum
+    pt3_mux        = sum
+    gclr_mux       = GND
+    pt4_mux        = sum
+    pt4_func       = clk
+    gclk_mux       = GCLK2
+    pt5_mux        = sum
+    pt5_func       = as
+    xor_a_mux      = sum
+    xor_b_mux      = VCC_pt12
+    cas_mux        = GND
+    xor_invert     = on
+    d_mux          = comb
+    dfast_mux      = pt2
+    reset          = GND
+    storage        = latch
+    fb_mux         = comb
+    o_mux          = comb
+    oe_mux         = GND
+    slew_rate      = slow
+    output_driver  = push_pull
+    low_power      = off
+UIM80: GND1
+UIM79: GND1
+UIM78: GND1
+UIM77: GND1
+UIM76: GND1
+UIM75: GND1
+UIM74: GND1
+UIM73: GND1
+UIM72: GND1
+UIM71: GND1
+UIM70: GND1
+UIM69: GND1
+UIM68: GND1
+UIM67: GND1
+UIM66: GND1
+UIM65: GND1
+UIM64: GND1
+UIM63: GND1
+UIM62: GND1
+UIM61: GND1
+UIM60: GND1
+UIM59: GND1
+UIM58: GND1
+UIM57: GND1
+UIM56: GND1
+UIM55: GND1
+UIM54: GND1
+UIM53: GND1
+UIM52: GND1
+UIM51: GND1
+UIM50: GND1
+UIM49: GND1
+UIM48: GND1
+UIM47: GND1
+UIM46: GND1
+UIM45: GND1
+UIM44: GND1
+UIM43: GND1
+UIM42: GND1
+UIM41: GND1
+UIM40: GND1
+UIM39: GND1
+UIM38: GND1
+UIM37: GND1
+UIM36: GND1
+UIM35: GND1
+UIM34: GND1
+UIM33: GND1
+UIM32: GND1
+UIM31: GND1
+UIM30: GND1
+UIM29: GND1
+UIM28: GND1
+UIM27: GND1
+UIM26: M1_PAD
+UIM25: GND1
+UIM24: M2_PAD
+UIM23: GND1
+UIM22: GND1
+UIM21: GND1
+UIM20: GND1
+UIM19: GND1
+UIM18: GND1
+UIM17: GND1
+UIM16: GND1
+UIM15: GND1
+UIM14: GND1
+UIM13: GND1
+UIM12: GND1
+UIM11: GND1
+UIM10: GND1
+UIM9: GND1
+UIM8: GND1
+UIM7: GND1
+UIM6: GND1
+UIM5: GND1
+UIM4: GND1
+UIM3: GND1
+UIM2: GND1
+UIM1: GND1
+GCLR: invert=off
+GCLK1: C1_PAD invert=off
+GCLK2: C2_PAD invert=off
+GCLK3: M17_PAD invert=off
+GOE6: GND1 invert=off
+GOE5: GND1 invert=off
+GOE4: GND1 invert=off
+GOE3: GND1 invert=off
+GOE2: GND1 invert=off
+GOE1: GND1 invert=off
+PIN:
+  CLK1:
+    standby_wakeup = on
+  CLK2:
+    standby_wakeup = on
+  CLK3:
+    standby_wakeup = on
+  TMS:
+    termination    = high_z
+  TDI:
+    termination    = high_z
+CFG:
+  arming_switch  = armed
+  read_protection = off
+  jtag_pin_func  = jtag
+  pd1_pin_func   = user
+  pd2_pin_func   = user
+  termination    = bus_keeper
+  reset_hysteresis = small
+USR0: ff
+USR1: ff

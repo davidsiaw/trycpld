@@ -1,0 +1,293 @@
+Atmel ATF1502AS Fitter Version 1.8.7.8 ,running Fri Aug 19 02:54:51 2022
+
+
+fit1502 -i and16.edif -o and16.jed -ifmt edif -device 1502C4
+
+
+****** Initial fitting strategy and property ******
+ Pla_in_file = and16.tt2
+ Pla_out_file = and16.tt3
+ Jedec_file = and16.jed
+ Vector_file = and16.tmv
+ verilog_file = and16.vt
+ Time_file = 
+ Log_file = and16.fit
+ err_file = 
+ Device_name = PLCC44
+ Module_name = 
+ Package_type = PLCC
+ Preassign_file = 
+ Property_file = 
+ Sleep_mode = 
+ Preassignment = 
+ Security_mode = OFF
+ Pin_keep_mode = ON
+ Dedicated_input_clock = 
+ Dedicated_input_reset = 
+ Dedicated_input_oe = 
+ supporter = ABEL
+ optimize = ON
+ Soft_buffer = 
+ Xor_synthesis = OFF
+ Foldback_logic =  on
+ Expander = 
+ Cascade_logic = OFF
+ Dedicated_input = 
+ Output_fast = OFF
+ *******************************
+ Power down pin 1 = OFF
+ Power down pin 2 = OFF
+ power_reset = OFF
+ JTAG = ON
+ TDI pullup = OFF
+ TMS pullup = OFF
+ MC_power = OFF
+ Open_collector = OFF
+ ITD0 = ON
+ ITD1 = ON
+ ITD2 = ON
+ Fast_inlatch = off
+ *******************************
+---------------------------------------------------------
+ Fitter_Pass 1, Preassign = KEEP, LOGIC_DOUBLING : OFF 
+ ... 
+
+Performing global Output Enable pin assignments ...
+
+Performing global pin assignments ...
+--------------------------------------
+
+
+
+Final global control pins assignment (if applicable)...
+-------------------------------------------------------
+
+
+
+Performing input pin pre-assignments ...
+------------------------------------
+
+Attempt to place floating signals ...
+------------------------------------
+I1_0 is placed at pin 4 (MC 1)
+I1_1 is placed at pin 5 (MC 2)
+I1_2 is placed at pin 6 (MC 3)
+TDI is placed at pin 7 (MC 4)
+I1_3 is placed at pin 8 (MC 5)
+I1_4 is placed at pin 9 (MC 6)
+I1_5 is placed at pin 11 (MC 7)
+I1_6 is placed at pin 12 (MC 8)
+TMS is placed at pin 13 (MC 9)
+I1_7 is placed at pin 14 (MC 10)
+I1_8 is placed at pin 16 (MC 11)
+I2_0 is placed at pin 17 (MC 12)
+I2_1 is placed at pin 18 (MC 13)
+I2_2 is placed at pin 19 (MC 14)
+I2_3 is placed at pin 20 (MC 15)
+Q is placed at pin 21 (MC 16)
+I2_4 is placed at pin 41 (MC 17)
+I2_5 is placed at pin 40 (MC 18)
+I2_6 is placed at pin 39 (MC 19)
+TDO is placed at pin 38 (MC 20)
+I2_7 is placed at pin 37 (MC 21)
+I2_8 is placed at pin 36 (MC 22)
+I3_0 is placed at pin 34 (MC 23)
+I3_1 is placed at pin 33 (MC 24)
+TCK is placed at pin 32 (MC 25)
+I3_2 is placed at pin 31 (MC 26)
+I3_3 is placed at pin 29 (MC 27)
+I3_4 is placed at pin 28 (MC 28)
+I3_5 is placed at pin 27 (MC 29)
+I3_6 is placed at pin 26 (MC 30)
+I3_7 is placed at pin 25 (MC 31)
+I3_8 is placed at pin 24 (MC 32)
+
+                                                                 
+                                                                 
+                                                                 
+                                                                 
+                  I  I  I                   I  I                 
+                  1  1  1  V             G  2  2                 
+                  _  _  _  C             N  _  _                 
+                  2  1  0  C             D  4  5                 
+               ____________________________________              
+              /   6  5  4  3  2  1 44 43 42 41 40  \             
+         TDI |  7                                39 | I2_6       
+        I1_3 |  8                                38 | TDO        
+        I1_4 |  9                                37 | I2_7       
+         GND | 10                                36 | I2_8       
+        I1_5 | 11                                35 | VCC        
+        I1_6 | 12            ATF1502             34 | I3_0       
+         TMS | 13          44-Lead PLCC          33 | I3_1       
+        I1_7 | 14                                32 | TCK        
+         VCC | 15                                31 | I3_2       
+        I1_8 | 16                                30 | GND        
+        I2_0 | 17                                29 | I3_3       
+             |   18 19 20 21 22 23 24 25 26 27 28   |            
+              \____________________________________/             
+                 I  I  I  Q  G  V  I  I  I  I  I                 
+                 2  2  2     N  C  3  3  3  3  3                 
+                 _  _  _     D  C  _  _  _  _  _                 
+                 1  2  3           8  7  6  5  4                 
+
+
+
+VCC = Supply Voltage pin which must be connected to (5.0V or 3.0V)
+
+GND = GND pin which must be connected to ground
+
+TMS,TDI,TDO,TDI = JTAG pins which must reserved for the JTAG interface
+
+NC = Unused I/O pins which must be unconnected on the board
+
+Universal-Interconnect-Multiplexer assignments
+------------------------------------------------
+FanIn assignment for block A [27]
+{
+I1_4,I1_3,I2_7,I1_5,I3_0,I1_6,I2_8,I3_1,I1_1,I1_0,I2_4,I1_2,I2_6,I2_5,I2_3,I3_7,I2_2,I3_8,I3_5,I3_6,I2_1,I1_8,I3_3,I1_7,I3_4,I3_2,I2_0,
+}
+Multiplexer assignment for block A
+I1_4			(MC5	P)   : MUX 1		Ref (A6p)
+I1_3			(MC4	P)   : MUX 2		Ref (A5p)
+I2_7			(MC17	P)   : MUX 3		Ref (B21p)
+I1_5			(MC6	P)   : MUX 4		Ref (A7p)
+I3_0			(MC19	P)   : MUX 5		Ref (B23p)
+I1_6			(MC7	P)   : MUX 6		Ref (A8p)
+I2_8			(MC18	P)   : MUX 7		Ref (B22p)
+I3_1			(MC20	P)   : MUX 8		Ref (B24p)
+I1_1			(MC2	P)   : MUX 11		Ref (A2p)
+I1_0			(MC1	P)   : MUX 12		Ref (A1p)
+I2_4			(MC14	P)   : MUX 13		Ref (B17p)
+I1_2			(MC3	P)   : MUX 14		Ref (A3p)
+I2_6			(MC16	P)   : MUX 15		Ref (B19p)
+I2_5			(MC15	P)   : MUX 17		Ref (B18p)
+I2_3			(MC13	P)   : MUX 20		Ref (A15p)
+I3_7			(MC26	P)   : MUX 21		Ref (B31p)
+I2_2			(MC12	P)   : MUX 24		Ref (A14p)
+I3_8			(MC27	P)   : MUX 25		Ref (B32p)
+I3_5			(MC24	P)   : MUX 26		Ref (B29p)
+I3_6			(MC25	P)   : MUX 27		Ref (B30p)
+I2_1			(MC11	P)   : MUX 28		Ref (A13p)
+I1_8			(MC9	P)   : MUX 30		Ref (A11p)
+I3_3			(MC22	P)   : MUX 33		Ref (B27p)
+I1_7			(MC8	P)   : MUX 34		Ref (A10p)
+I3_4			(MC23	P)   : MUX 35		Ref (B28p)
+I3_2			(MC21	P)   : MUX 37		Ref (B26p)
+I2_0			(MC10	P)   : MUX 38		Ref (A12p)
+
+Creating JEDEC file and16.jed ...
+
+PLCC44 programmed logic:
+-----------------------------------
+Q = (I1_0 & I1_1 & I1_2 & I1_3 & I1_4 & I1_5 & I1_6 & I1_7 & I1_8 & I2_0 & I2_1 & I2_2 & I2_3 & I2_4 & I2_5 & I2_6 & I2_7 & I2_8 & I3_0 & I3_1 & I3_2 & I3_3 & I3_4 & I3_5 & I3_6 & I3_7 & I3_8);
+
+
+PLCC44 Pin/Node Placement:
+------------------------------------
+Pin 4  = I1_0; /* MC 1 */
+Pin 5  = I1_1; /* MC 2 */
+Pin 6  = I1_2; /* MC 3 */
+Pin 7  = TDI; /* MC 4 */
+Pin 8  = I1_3; /* MC 5 */
+Pin 9  = I1_4; /* MC 6 */
+Pin 11 = I1_5; /* MC  7 */
+Pin 12 = I1_6; /* MC  8 */
+Pin 13 = TMS; /* MC  9 */
+Pin 14 = I1_7; /* MC 10 */ 
+Pin 16 = I1_8; /* MC 11 */ 
+Pin 17 = I2_0; /* MC 12 */ 
+Pin 18 = I2_1; /* MC 13 */ 
+Pin 19 = I2_2; /* MC 14 */ 
+Pin 20 = I2_3; /* MC 15 */ 
+Pin 21 = Q; /* MC 16 */ 
+Pin 24 = I3_8; /* MC 32 */ 
+Pin 25 = I3_7; /* MC 31 */ 
+Pin 26 = I3_6; /* MC 30 */ 
+Pin 27 = I3_5; /* MC 29 */ 
+Pin 28 = I3_4; /* MC 28 */ 
+Pin 29 = I3_3; /* MC 27 */ 
+Pin 31 = I3_2; /* MC 26 */ 
+Pin 32 = TCK; /* MC 25 */ 
+Pin 33 = I3_1; /* MC 24 */ 
+Pin 34 = I3_0; /* MC 23 */ 
+Pin 36 = I2_8; /* MC 22 */ 
+Pin 37 = I2_7; /* MC 21 */ 
+Pin 38 = TDO; /* MC 20 */ 
+Pin 39 = I2_6; /* MC 19 */ 
+Pin 40 = I2_5; /* MC 18 */ 
+Pin 41 = I2_4; /* MC 17 */ 
+
+** Resource Usage **
+
+
+DCERP Field = Summary of Allocations.
+|||||
+|||||_Preset [p,-]       ==  p = PT preset, - No Preset.
+||||
+||||__Reset [g,r,-]      ==  g= Global AR, r = PT reset, - No reset.
+|||
+|||___Clock Enable [e,-] ==  e = Product Term, - always enabled, - none.
+||
+||____Clock [c,g,-],     ==  c = Product term, g = Global term, - No Clock.
+|
+|_____Type [C,D,L,T],    ==  Register type C= combin, D=dff, L=latch, T=tff.
+
+For input only = INPUT.
+
+MCell Pin# Oe   PinDrive  DCERP  FBDrive  DCERP  Foldback  CascadeOut     TotPT output_slew
+MC1   4    --   I1_0      INPUT  --              --        --             0     slow
+MC2   5    --   I1_1      INPUT  --              --        --             0     slow
+MC3   6    --   I1_2      INPUT  --              --        --             0     slow
+MC4   7    --   TDI       INPUT  --              --        --             0     slow
+MC5   8    --   I1_3      INPUT  --              --        --             0     slow
+MC6   9    --   I1_4      INPUT  --              --        --             0     slow
+MC7   11   --   I1_5      INPUT  --              --        --             0     slow
+MC8   12   --   I1_6      INPUT  --              --        --             0     slow
+MC9   13   --   TMS       INPUT  --              --        --             0     slow
+MC10  14   --   I1_7      INPUT  --              --        --             0     slow
+MC11  16   --   I1_8      INPUT  --              --        --             0     slow
+MC12  17   --   I2_0      INPUT  --              --        --             0     slow
+MC13  18   --   I2_1      INPUT  --              --        --             0     slow
+MC14  19   --   I2_2      INPUT  --              --        --             0     slow
+MC15  20   --   I2_3      INPUT  --              --        --             0     slow
+MC16  21   on   Q         C----  --              --        --             1     slow
+MC17  41   --   I2_4      INPUT  --              --        --             0     slow
+MC18  40   --   I2_5      INPUT  --              --        --             0     slow
+MC19  39   --   I2_6      INPUT  --              --        --             0     slow
+MC20  38   --   TDO       INPUT  --              --        --             0     slow
+MC21  37   --   I2_7      INPUT  --              --        --             0     slow
+MC22  36   --   I2_8      INPUT  --              --        --             0     slow
+MC23  34   --   I3_0      INPUT  --              --        --             0     slow
+MC24  33   --   I3_1      INPUT  --              --        --             0     slow
+MC25  32   --   TCK       INPUT  --              --        --             0     slow
+MC26  31   --   I3_2      INPUT  --              --        --             0     slow
+MC27  29   --   I3_3      INPUT  --              --        --             0     slow
+MC28  28   --   I3_4      INPUT  --              --        --             0     slow
+MC29  27   --   I3_5      INPUT  --              --        --             0     slow
+MC30  26   --   I3_6      INPUT  --              --        --             0     slow
+MC31  25   --   I3_7      INPUT  --              --        --             0     slow
+MC32  24   --   I3_8      INPUT  --              --        --             0     slow
+MC0   2         --               --              --        --             0     slow
+MC0   1         --               --              --        --             0     slow
+MC0   44        --               --              --        --             0     slow
+MC0   43        --               --              --        --             0     slow
+
+Logic Array Block	Logic Cells	I/O Pins	Foldbacks	TotalPT		FanIN	Cascades
+A: LC1	- LC16		1/16(6%)	16/16(100%)	0/16(0%)	1/80(1%)	(27)	0
+B: LC17	- LC32		0/16(0%)	16/16(100%)	0/16(0%)	0/80(0%)	(0)	0
+
+Total dedicated input used:	0/4 	(0%)
+Total I/O pins used		32/32 	(100%)
+Total Logic cells used 		1/32 	(3%)
+Total Flip-Flop used 		0/32 	(0%)
+Total Foldback logic used 	0/32 	(0%)
+Total Nodes+FB/MCells 		1/32 	(3%)
+Total cascade used 		0
+Total input pins 		31
+Total output pins 		1
+Total Pts 			1
+Creating pla file and16.tt3 with 0 inputs 0 outputs, 0 pins 0 nodes and 0 pterms...
+
+----------------  End fitter, Design FITS
+$Device PLCC44 fits 
+FIT1502 completed in 0.00 seconds

@@ -1,0 +1,9 @@
+CHIP "r2" ASSIGNED TO AN PLCC44
+A_1					: 4
+A_0					: 5
+TDI					: 7
+TMS					: 13
+Q_0					: 20
+Q_1					: 21
+TDO					: 38
+TCK					: 32
