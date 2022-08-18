@@ -1,0 +1,18 @@
+#$ TOOL ABEL Atmel 1502 1.8.7.8
+#$ MODULE circ
+#$ JEDECFILE circ
+#$ PINS 3 IO:21 IE:44 CLK:43 
+#$ NODES 3 buff1:615 dff2:604 DFF:609 
+.type fr
+.i 5
+.o 8
+.ilb IE CLK IO.PIN buff1.PIN dff2.Q
+.ob IO IO.OE buff1 buff1.OE dff2.D dff2.C DFF.D DFF.C
+.p 6
+---1-	1~~~1~~~
+--1--	~~1~~~~~
+----1	~~~~~~1~
+0----	~1~~~~~~
+1----	~~~1~~~~
+-1---	~~~~~1~1
+.end

@@ -1,0 +1,242 @@
+Atmel ATF1502AS Fitter Version 1.8.7.8 ,running Fri Aug 19 04:33:12 2022
+
+
+fit1502 -i circ.edif -o circ.jed -ifmt edif -device 1502C44
+
+
+****** Initial fitting strategy and property ******
+ Pla_in_file = circ.tt2
+ Pla_out_file = circ.tt3
+ Jedec_file = circ.jed
+ Vector_file = circ.tmv
+ verilog_file = circ.vt
+ Time_file = 
+ Log_file = circ.fit
+ err_file = 
+ Device_name = PLCC44
+ Module_name = 
+ Package_type = PLCC
+ Preassign_file = 
+ Property_file = 
+ Sleep_mode = 
+ Preassignment = 
+ Security_mode = OFF
+ Pin_keep_mode = ON
+ Dedicated_input_clock = 
+ Dedicated_input_reset = 
+ Dedicated_input_oe = 
+ supporter = ABEL
+ optimize = ON
+ Soft_buffer = 
+ Xor_synthesis = OFF
+ Foldback_logic =  on
+ Expander = 
+ Cascade_logic = OFF
+ Dedicated_input = 
+ Output_fast = OFF
+ *******************************
+ Power down pin 1 = OFF
+ Power down pin 2 = OFF
+ power_reset = OFF
+ JTAG = ON
+ TDI pullup = OFF
+ TMS pullup = OFF
+ MC_power = OFF
+ Open_collector = OFF
+ ITD0 = ON
+ ITD1 = ON
+ ITD2 = ON
+ Fast_inlatch = off
+ *******************************
+---------------------------------------------------------
+ Fitter_Pass 1, Preassign = KEEP, LOGIC_DOUBLING : OFF 
+ ... 
+
+Performing global Output Enable pin assignments ...
+
+Performing global pin assignments ...
+--------------------------------------
+
+
+
+Final global control pins assignment (if applicable)...
+-------------------------------------------------------
+CLK assigned to pin  43
+IE assigned to pin  44
+
+
+
+Performing input pin pre-assignments ...
+------------------------------------
+CLK assigned to pin  43
+IE assigned to pin  44
+
+Attempt to place floating signals ...
+------------------------------------
+TDI is placed at pin 7 (MC 4)
+dff2 is placed at feedback node 604 (MC 4)
+TMS is placed at pin 13 (MC 9)
+DFF is placed at feedback node 609 (MC 9)
+buff1 is placed at feedback node 615 (MC 15)
+IO is placed at pin 21 (MC 16)
+TDO is placed at pin 38 (MC 20)
+TCK is placed at pin 32 (MC 25)
+
+                                                                 
+                                                                 
+                                                                 
+                                                                 
+                           V          C  G                       
+                           C       I  L  N                       
+                           C       E  K  D                       
+               ____________________________________              
+              /   6  5  4  3  2  1 44 43 42 41 40  \             
+         TDI |  7                                39 |            
+             |  8                                38 | TDO        
+             |  9                                37 |            
+         GND | 10                                36 |            
+             | 11                                35 | VCC        
+             | 12            ATF1502             34 |            
+         TMS | 13          44-Lead PLCC          33 |            
+             | 14                                32 | TCK        
+         VCC | 15                                31 |            
+             | 16                                30 | GND        
+             | 17                                29 |            
+             |   18 19 20 21 22 23 24 25 26 27 28   |            
+              \____________________________________/             
+                          I  G  V                                
+                          O  N  C                                
+                             D  C                                
+
+
+
+VCC = Supply Voltage pin which must be connected to (5.0V or 3.0V)
+
+GND = GND pin which must be connected to ground
+
+TMS,TDI,TDO,TDI = JTAG pins which must reserved for the JTAG interface
+
+NC = Unused I/O pins which must be unconnected on the board
+
+Universal-Interconnect-Multiplexer assignments
+------------------------------------------------
+FanIn assignment for block A [4]
+{
+IE,IO,
+buff1,
+dff2,
+}
+Multiplexer assignment for block A
+buff1			(MC2	FB)  : MUX 5		Ref (A15fb)
+IE			(MC4	FB)  : MUX 10		Ref (OE1)
+IO			(MC3	P)   : MUX 23		Ref (A16p)
+dff2			(MC1	FB)  : MUX 30		Ref (A4fb)
+
+Creating JEDEC file circ.jed ...
+
+PLCC44 programmed logic:
+-----------------------------------
+IO = buff1.PIN;
+
+buff1.TH = IO.PIN;
+
+dff2.D = buff1.PIN;
+
+DFF.D = dff2.Q;
+
+IO.OE = !IE;
+
+buff1.OE = IE;
+
+dff2.C = CLK;
+
+DFF.C = CLK;
+
+
+PLCC44 Pin/Node Placement:
+------------------------------------
+Pin 7  = TDI; /* MC 4 */
+Pin 13 = TMS; /* MC  9 */
+Pin 21 = IO; /* MC 16 */ 
+Pin 32 = TCK; /* MC 25 */ 
+Pin 38 = TDO; /* MC 20 */ 
+Pin 43 = CLK;
+Pin 44 = IE;
+PINNODE 604 = dff2; /* MC 4 Feedback */
+PINNODE 609 = DFF; /* MC 9 Feedback */
+PINNODE 615 = buff1; /* MC 15 Feedback */
+
+** Resource Usage **
+
+
+DCERP Field = Summary of Allocations.
+|||||
+|||||_Preset [p,-]       ==  p = PT preset, - No Preset.
+||||
+||||__Reset [g,r,-]      ==  g= Global AR, r = PT reset, - No reset.
+|||
+|||___Clock Enable [e,-] ==  e = Product Term, - always enabled, - none.
+||
+||____Clock [c,g,-],     ==  c = Product term, g = Global term, - No Clock.
+|
+|_____Type [C,D,L,T],    ==  Register type C= combin, D=dff, L=latch, T=tff.
+
+For input only = INPUT.
+
+MCell Pin# Oe   PinDrive  DCERP  FBDrive  DCERP  Foldback  CascadeOut     TotPT output_slew
+MC1   4         --               --              --        --             0     slow
+MC2   5         --               --              --        --             0     slow
+MC3   6         --               --              --        --             0     slow
+MC4   7    --   TDI       INPUT  dff2     Dg---  --        --             1     slow
+MC5   8         --               --              --        --             0     slow
+MC6   9         --               --              --        --             0     slow
+MC7   11        --               --              --        --             0     slow
+MC8   12        --               --              --        --             0     slow
+MC9   13   --   TMS       INPUT  DFF      Dg---  --        --             1     slow
+MC10  14        --               --              --        --             0     slow
+MC11  16        --               --              --        --             0     slow
+MC12  17        --               --              --        --             0     slow
+MC13  18        --               --              --        --             0     slow
+MC14  19        --               --              --        --             0     slow
+MC15  20   PT   --               buff1    C----  --        --             2     slow
+MC16  21   OE4  IO        C----  --              --        --             1     slow
+MC17  41        --               --              --        --             0     slow
+MC18  40        --               --              --        --             0     slow
+MC19  39        --               --              --        --             0     slow
+MC20  38   --   TDO       INPUT  --              --        --             0     slow
+MC21  37        --               --              --        --             0     slow
+MC22  36        --               --              --        --             0     slow
+MC23  34        --               --              --        --             0     slow
+MC24  33        --               --              --        --             0     slow
+MC25  32   --   TCK       INPUT  --              --        --             0     slow
+MC26  31        --               --              --        --             0     slow
+MC27  29        --               --              --        --             0     slow
+MC28  28        --               --              --        --             0     slow
+MC29  27        --               --              --        --             0     slow
+MC30  26        --               --              --        --             0     slow
+MC31  25        --               --              --        --             0     slow
+MC32  24        --               --              --        --             0     slow
+MC0   2         --               --              --        --             0     slow
+MC0   1         --               --              --        --             0     slow
+MC0   44        IE        INPUT  --              --        --             0     slow
+MC0   43        CLK       INPUT  --              --        --             0     slow
+
+Logic Array Block	Logic Cells	I/O Pins	Foldbacks	TotalPT		FanIN	Cascades
+A: LC1	- LC16		4/16(25%)	3/16(18%)	0/16(0%)	5/80(6%)	(4)	0
+B: LC17	- LC32		0/16(0%)	2/16(12%)	0/16(0%)	0/80(0%)	(0)	0
+
+Total dedicated input used:	2/4 	(50%)
+Total I/O pins used		5/32 	(15%)
+Total Logic cells used 		4/32 	(12%)
+Total Flip-Flop used 		2/32 	(6%)
+Total Foldback logic used 	0/32 	(0%)
+Total Nodes+FB/MCells 		4/32 	(12%)
+Total cascade used 		0
+Total input pins 		6
+Total output pins 		1
+Total Pts 			5
+Creating pla file circ.tt3 with 0 inputs 0 outputs, 0 pins 0 nodes and 0 pterms...
+
+----------------  End fitter, Design FITS
+$Device PLCC44 fits 
+FIT1502 completed in 0.00 seconds

@@ -1,0 +1,11 @@
+CHIP "circ" ASSIGNED TO AN PLCC44
+TDI					: 7
+dff2					: 604
+TMS					: 13
+DFF					: 609
+buff1					: 615
+IO					: 21
+TDO					: 38
+TCK					: 32
+CLK					: 43
+IE					: 44

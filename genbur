@@ -1,7 +1,7 @@
 #!/bin/bash
 
 yosys -p "read_verilog -lib prjbureau/cells.v; read_verilog $1.v; hierarchy; write_edif -top top -attrprop" -o $1.edif
-./fit1502 -i $1.edif -o $1.jed -strategy ifmt=edif -device 1502C4
+./fit1502 -i $1.edif -o $1.jed -strategy ifmt=edif -device 1502C44
 pushd prjbureau
   python3 -m util.fusecli ../$1.jed get > ../$1.bur
 popd

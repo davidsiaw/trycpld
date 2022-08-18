@@ -1,0 +1,8 @@
+CHIP "dff" ASSIGNED TO AN PLCC44
+D					: 4
+TDI					: 7
+TMS					: 13
+Q					: 21
+TDO					: 38
+TCK					: 32
+CLK					: 43
