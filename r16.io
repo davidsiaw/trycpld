@@ -1,0 +1,41 @@
+CHIP "r16"
+BEGIN
+
+    DEVICE = "PLCC44";
+    "Q_2"                                     : OUTPUT_PIN = 4 ;
+    "Q_4"                                     : OUTPUT_PIN = 5 ;
+    "Q_3"                                     : OUTPUT_PIN = 6 ;
+    "TDI"                                     : INPUT_PIN = 7 ;
+    "Q_5"                                     : OUTPUT_PIN = 8 ;
+    "Q_6"                                     : OUTPUT_PIN = 9 ;
+    "Q_7"                                     : OUTPUT_PIN = 11 ;
+    "Q_8"                                     : OUTPUT_PIN = 12 ;
+    "TMS"                                     : INPUT_PIN = 13 ;
+    "Q_9"                                     : OUTPUT_PIN = 14 ;
+    "Q_11"                                    : OUTPUT_PIN = 16 ;
+    "Q_10"                                    : OUTPUT_PIN = 17 ;
+    "Q_12"                                    : OUTPUT_PIN = 18 ;
+    "Q_13"                                    : OUTPUT_PIN = 19 ;
+    "Q_14"                                    : OUTPUT_PIN = 20 ;
+    "Q_15"                                    : OUTPUT_PIN = 21 ;
+    "A_15"                                    : INPUT_PIN = 41 ;
+    "A_14"                                    : INPUT_PIN = 40 ;
+    "A_13"                                    : INPUT_PIN = 39 ;
+    "TDO"                                     : INPUT_PIN = 38 ;
+    "A_12"                                    : INPUT_PIN = 37 ;
+    "A_10"                                    : INPUT_PIN = 36 ;
+    "A_11"                                    : INPUT_PIN = 34 ;
+    "A_9"                                     : INPUT_PIN = 33 ;
+    "TCK"                                     : INPUT_PIN = 32 ;
+    "A_8"                                     : INPUT_PIN = 31 ;
+    "A_7"                                     : INPUT_PIN = 29 ;
+    "A_6"                                     : INPUT_PIN = 28 ;
+    "A_5"                                     : INPUT_PIN = 27 ;
+    "A_3"                                     : INPUT_PIN = 26 ;
+    "Q_0"                                     : OUTPUT_PIN = 25 ;
+    "Q_1"                                     : OUTPUT_PIN = 24 ;
+    "A_4"                                     : INPUT_PIN = 2 ;
+    "A_2"                                     : INPUT_PIN = 43 ;
+    "A_1"                                     : INPUT_PIN = 1 ;
+    "A_0"                                     : INPUT_PIN = 44 ;
+END;

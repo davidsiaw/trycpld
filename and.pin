@@ -1,0 +1,8 @@
+CHIP "and" ASSIGNED TO AN PLCC44
+A					: 12
+B					: 11
+TDI					: 7
+C					: 4
+TMS					: 13
+TCK					: 32
+TDO					: 38

@@ -1,0 +1,13 @@
+#$ TOOL ABEL Atmel 1502 1.8.7.8
+#$ MODULE inbuf
+#$ JEDECFILE inbuf
+#$ PINS 2 Q:21 A:4 
+#$ NODES 0 
+.type fr
+.i 1
+.o 1
+.ilb A
+.ob Q
+.p 1
+1	1
+.end

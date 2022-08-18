@@ -1,0 +1,7 @@
+CHIP "short" ASSIGNED TO AN PLCC44
+A					: 4
+TDI					: 7
+TMS					: 13
+Q					: 21
+TDO					: 38
+TCK					: 32

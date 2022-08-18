@@ -1,0 +1,3 @@
+[submodule "prjbureau"]
+	path = prjbureau
+	url = git@github.com:davidsiaw/prjbureau
