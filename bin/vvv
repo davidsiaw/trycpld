@@ -1,0 +1,230 @@
+#!/usr/bin/env ruby
+
+class Term
+    attr_reader :name
+
+    def +(right)
+        SumTerm.new(self, right)
+    end
+
+    def *(right)
+        ProductTerm.new(self, right)
+    end
+
+    def ^(right)
+        XORTerm.new(self, right)
+    end
+
+    def ~
+        InverseTerm.new(self)
+    end
+end
+
+class BaseTerm < Term
+    def initialize(name, context = nil)
+        @name = name
+        @context = context
+    end
+
+    def <=(expr)
+        @context.output(self.name, expr)
+    end
+
+    def innerterms
+        []
+    end
+end
+
+class InverseTerm < Term
+    def initialize(term)
+        @term = term
+    end
+
+    def name
+        "!#{@term.name}"
+    end
+
+    def innerterms
+        [@term]
+    end
+
+    def to_v(output_wire)
+        "INV not_#{@term.name}(.A(#{@term.name}), .QN(#{output_wire}));"
+    end
+end
+
+class XORTerm < Term
+    def initialize(term1, term2)
+        @term1 = term1
+        @term2 = term2
+    end
+
+    def name
+        "#{@term1.name}#{@term2.name}"
+    end
+
+    def innerterms
+        [@term1, @term2]
+    end
+
+    def to_v(output_wire)
+        "XOR2 xor_#{@term1.name}_#{@term2.name}(.A(#{@term1.name}), .B(#{@term2.name}), .Q(#{output_wire}));"
+    end
+end
+
+class ProductTerm < Term
+    def initialize(term1, term2)
+        @term1 = term1
+        @term2 = term2
+    end
+
+    def name
+        "#{@term1.name}#{@term2.name}"
+    end
+
+    def innerterms
+        [@term1, @term2]
+    end
+
+    def to_v(output_wire)
+        "AND2 and_#{@term1.name}_#{@term2.name}(.A(#{@term1.name}), .B(#{@term2.name}), .Q(#{output_wire}));"
+    end
+end
+
+class SumTerm < Term
+    def initialize(term1, term2)
+        @term1 = term1
+        @term2 = term2
+    end
+
+    def name
+        "#{@term1.name}+#{@term2.name}"
+    end
+
+    def innerterms
+        [@term1, @term2]
+    end
+
+    def to_v(output_wire)
+        "OR2 or_#{@term1.name}_#{@term2.name}(.A(#{@term1.name}), .B(#{@term2.name}), .Q(#{output_wire}));"
+    end
+end
+
+
+class FDL
+    def initialize
+        @trees = {}
+        @terms = {}
+        
+    end
+
+    def execute(&block)
+        instance_eval(&block)
+    end
+
+    def output(name, expr)
+       @trees[name] = expr
+    end
+
+    def method_missing(name)
+        unless @terms[name.to_s]
+            name = name.to_s
+            @terms[name] = BaseTerm.new(name, self)
+        end
+
+        @terms[name.to_s]
+    end
+
+    def ast
+        @trees
+    end
+end
+
+class FDLGen
+    
+    def initialize(fdl)
+        @fdl = fdl
+    end
+
+    def flatten(term = nil, result = {}, inputs = {}, outputs = {})
+        if term.nil?
+            @fdl.ast.each do |name, topterm|
+
+                flat_terms = []
+                topterm.innerterms.each do |t|
+                    flat_terms << BaseTerm.new(flatten(t, result, inputs, outputs));
+                end
+
+
+                newterm = topterm.class.new(*flat_terms)
+                outputs[name] = newterm
+            end
+
+            return {
+                interm: result,
+                inputs: inputs,
+                outputs: outputs
+            }
+        end
+
+        if term.is_a? BaseTerm
+            inputs[term.name] = term
+            return term.name
+        end
+
+        flat_terms = []
+        term.innerterms.each do |t|
+            flat_terms << BaseTerm.new(flatten(t, result, inputs, outputs));
+        end
+
+        newtermname = "n#{result.length}"
+
+        newterm = term.class.new(*flat_terms)
+        result[newtermname] = newterm
+        
+        newtermname
+    end
+
+    def flattened
+        @flattened ||= flatten
+    end
+
+    def inputlist
+        flattened[:inputs].keys.join(', ')
+    end
+
+    def outputlist
+        flattened[:outputs].keys.join(', ')
+    end
+
+    def wires
+        return '' if flattened[:interm].length == 0
+        "wire " + flattened[:interm].keys.join(', ') + ";";
+    end
+
+    def statements
+        (flattened[:interm].to_a + flattened[:outputs].to_a).map{|k,x| x.to_v(k)}.join("\n    ");
+    end
+
+    def to_v
+        <<~VERILOG
+            module top(
+                input #{inputlist},
+                output #{outputlist}
+            );
+
+                #{wires}
+                #{statements}
+
+            endmodule
+        VERILOG
+    end
+end
+
+fdl = FDL.new
+fdl.execute do
+    instance_eval(ARGF.read)
+end
+
+gen = FDLGen.new(fdl)
+puts gen.to_v
